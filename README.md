@@ -42,7 +42,7 @@ output, and HTML reports.
 | `ssa` | `skill-scanner scan-all` | Scan all skills recursively |
 | `ssc` | `p6df::modules::cisco::scanner::scan::claude` | Scan `~/.claude/skills` |
 | `ssf` | `p6df::modules::cisco::scanner::scan::full` | Full scan (behavioral+llm+aidefense) |
-| `ssci`| `p6df::modules::cisco::scanner::scan::ci` | CI scan → SARIF output |
+| `ssci` | `p6df::modules::cisco::scanner::scan::ci` | CI scan → SARIF output |
 
 ### Environment Variables
 

@@ -36,9 +36,9 @@ output, and HTML reports.
 ### Aliases
 
 | Alias | Command | Description |
-|-------|---------|-------------|
+| ----- | ------- | ----------- |
 | `ssw` | `skill-scanner` | Interactive wizard |
-| `ss`  | `skill-scanner scan` | Scan a single skill |
+| `ss` | `skill-scanner scan` | Scan a single skill |
 | `ssa` | `skill-scanner scan-all` | Scan all skills recursively |
 | `ssc` | `p6df::modules::cisco::scanner::scan::claude` | Scan `~/.claude/skills` |
 | `ssf` | `p6df::modules::cisco::scanner::scan::full` | Full scan (behavioral+llm+aidefense) |
@@ -47,7 +47,7 @@ output, and HTML reports.
 ### Environment Variables
 
 | Variable | Purpose | Required |
-|----------|---------|----------|
+| -------- | ------- | -------- |
 | `SKILL_SCANNER_LLM_API_KEY` | LLM analyzer (Anthropic or OpenAI) | For `--use-llm` |
 | `SKILL_SCANNER_LLM_MODEL` | Model override | Optional |
 | `VIRUSTOTAL_API_KEY` | Binary/malware hash scanning | For `--use-virustotal` |

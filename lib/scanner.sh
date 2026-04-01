@@ -19,7 +19,7 @@ p6df::modules::cisco::scanner::install() {
 # Function: p6df::modules::cisco::scanner::scan(skill_path)
 #
 #  Args:
-#	skill_path - path to skill directory to scan
+#	skill_path -
 #
 #>
 ######################################################################
@@ -34,11 +34,12 @@ p6df::modules::cisco::scanner::scan() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::cisco::scanner::scan::all(skills_dir)
+# Function: p6df::modules::cisco::scanner::scan::all([skills_dir=$HOME/.claude/skills])
 #
 #  Args:
-#	skills_dir - directory containing skills to scan recursively
+#	OPTIONAL skills_dir - [$HOME/.claude/skills]
 #
+#  Environment:	 HOME
 #>
 ######################################################################
 p6df::modules::cisco::scanner::scan::all() {
@@ -70,9 +71,8 @@ p6df::modules::cisco::scanner::scan::claude() {
 # Function: p6df::modules::cisco::scanner::scan::full(skill_path)
 #
 #  Args:
-#	skill_path - path to skill directory to scan
+#	skill_path -
 #
-#  Environment:	 SKILL_SCANNER_LLM_API_KEY AI_DEFENSE_API_KEY
 #>
 ######################################################################
 p6df::modules::cisco::scanner::scan::full() {
@@ -93,9 +93,8 @@ p6df::modules::cisco::scanner::scan::full() {
 # Function: p6df::modules::cisco::scanner::scan::llm(skill_path)
 #
 #  Args:
-#	skill_path - path to skill directory to scan
+#	skill_path -
 #
-#  Environment:	 SKILL_SCANNER_LLM_API_KEY SKILL_SCANNER_LLM_MODEL
 #>
 ######################################################################
 p6df::modules::cisco::scanner::scan::llm() {
@@ -111,11 +110,11 @@ p6df::modules::cisco::scanner::scan::llm() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::cisco::scanner::scan::ci(skills_dir, output)
+# Function: p6df::modules::cisco::scanner::scan::ci([skills_dir=.], [output=results.sarif])
 #
 #  Args:
-#	skills_dir - directory containing skills
-#	output     - SARIF output file (default: results.sarif)
+#	OPTIONAL skills_dir - [.]
+#	OPTIONAL output - [results.sarif]
 #
 #>
 ######################################################################
@@ -135,13 +134,12 @@ p6df::modules::cisco::scanner::scan::ci() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::cisco::scanner::report::html(skill_path, output)
+# Function: p6df::modules::cisco::scanner::report::html(skill_path, [output=report.html])
 #
 #  Args:
-#	skill_path - path to skill directory to scan
-#	output     - HTML report file (default: report.html)
+#	skill_path -
+#	OPTIONAL output - [report.html]
 #
-#  Environment:	 SKILL_SCANNER_LLM_API_KEY
 #>
 ######################################################################
 p6df::modules::cisco::scanner::report::html() {
@@ -164,9 +162,8 @@ p6df::modules::cisco::scanner::report::html() {
 # Function: p6df::modules::cisco::scanner::scan::virustotal(skill_path)
 #
 #  Args:
-#	skill_path - path to skill directory to scan
+#	skill_path -
 #
-#  Environment:	 VIRUSTOTAL_API_KEY
 #>
 ######################################################################
 p6df::modules::cisco::scanner::scan::virustotal() {

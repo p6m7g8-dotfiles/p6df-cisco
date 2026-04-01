@@ -51,19 +51,16 @@ p6df::modules::cisco::aliases::init() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::cisco::init(_module, dir)
+# Function: words cisco $CISCO_HOST = p6df::modules::cisco::profile::mod()
 #
-#  Args:
-#	_module -
-#	dir -
+#  Returns:
+#	words - cisco $CISCO_HOST
 #
+#  Environment:	 CISCO_HOST
 #>
 ######################################################################
-p6df::modules::cisco::init() {
-  local _module="$1"
-  local dir="$2"
+p6df::modules::cisco::profile::mod() {
 
-  p6_bootstrap "$dir"
-
-  p6_return_void
+  p6_return_words 'cisco' '$CISCO_HOST'
 }
+

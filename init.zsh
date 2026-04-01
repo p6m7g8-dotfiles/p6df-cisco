@@ -61,6 +61,6 @@ p6df::modules::cisco::aliases::init() {
 ######################################################################
 p6df::modules::cisco::profile::mod() {
 
-  p6_return_words 'cisco' '$CISCO_HOST'
+  p6_return_words 'cisco' "$"
 }
 

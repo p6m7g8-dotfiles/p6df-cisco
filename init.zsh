@@ -47,20 +47,3 @@ p6df::modules::cisco::aliases::init() {
 
   p6_return_void
 }
-
-######################################################################
-#<
-#
-# Function: words cisco $CISCO_HOST = p6df::modules::cisco::profile::mod()
-#
-#  Returns:
-#	words - cisco $CISCO_HOST
-#
-#  Environment:	 CISCO_HOST
-#>
-######################################################################
-p6df::modules::cisco::profile::mod() {
-
-  p6_return_words 'cisco' "$"
-}
-
